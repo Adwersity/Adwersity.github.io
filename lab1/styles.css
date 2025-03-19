@@ -1,123 +1,99 @@
 /* Основні стилі */
-body {
-    font-family: Arial;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
-}
-
-/* Навігація */
-header {
-    background-color: #333;
-    padding: 15px 0;
-    text-align: center;
-    position: relative;
-}
-
-.header-text {
-    position: absolute;
-    top: 15px; 
-    left: 20px; 
-    color: rgb(192, 188, 188); 
-    font-size: 20px; 
-    font-weight: bold; 
-}
-
-.header-text span{
-    color: rgb(0, 157, 255)
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    padding: 8px 16px;
-}
-/* при наведенні курсора*/
-nav ul li a:hover {
-    cursor: pointer;
-    background-color: #727980;
-    border-radius: 20px;
-}
-
-/* Секції */
-main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-#events p {
-    font-size: 18px;  
-    color: #000000;  
-}
-
-
-h1 {
-    text-align: center;
-}
-
-/* Сітка подій */
-.event-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.event {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-}
-
-.event img {
-    max-width: 100%;
-    border-radius: 5px;
-}
-
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-footer p {
-    margin: 5px;
-}
-
-
-/* Адаптивність */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .event-grid {
-        grid-template-columns: 1fr;
-    }
-}
+ body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #f8f8f8;
+     color: #333;
+ }
+ 
+ /* Навігація */
+ header {
+     background-color: #0a6fdc;
+     padding: 15px 0;
+     text-align: center;
+ }
+ 
+ nav ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     justify-content: center;
+     gap: 20px;
+ }
+ 
+ nav ul li {
+     display: inline;
+ }
+ 
+ nav ul li a {
+     text-decoration: none;
+     color: white;
+     font-size: 20px;
+     padding: 8px 16px;
+ }
+ /* при наведенні курсора*/
+ nav ul li a:hover {
+     background-color: #0056b3;
+     border-radius: 20px;
+ }
+ 
+ /* Секції */
+ main {
+     padding: 20px;
+     max-width: 1200px;
+     margin: auto;
+ }
+ 
+ #events p {
+     font-size: 18px;  
+     color: #000000;  
+ }
+ 
+ 
+ h1 {
+     text-align: center;
+ }
+ 
+ /* Сітка подій */
+ .event-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 20px;
+     padding: 20px;
+ }
+ 
+ .event {
+     background: white;
+     padding: 15px;
+     border-radius: 10px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+     text-align: center;
+ }
+ 
+ .event img {
+     max-width: 100%;
+     border-radius: 5px;
+ }
+ 
+ 
+ footer {
+     background-color: #333;
+     color: white;
+     text-align: center;
+     padding: 10px;
+     margin-top: 20px;
+ }
+ 
+ /* Адаптивність */
+ @media (max-width: 768px) {
+     nav ul {
+         flex-direction: column;
+         align-items: center;
+     }
+ 
+     .event-grid {
+         grid-template-columns: 1fr;
+     }
+ }

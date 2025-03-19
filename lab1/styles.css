@@ -1,6 +1,6 @@
 /* Основні стилі */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
@@ -9,9 +9,23 @@ body {
 
 /* Навігація */
 header {
-    background-color: #0a6fdc;
+    background-color: #333;
     padding: 15px 0;
     text-align: center;
+    position: relative;
+}
+
+.header-text {
+    position: absolute;
+    top: 15px; 
+    left: 20px; 
+    color: rgb(192, 188, 188); 
+    font-size: 20px; 
+    font-weight: bold; 
+}
+
+.header-text span{
+    color: rgb(0, 157, 255)
 }
 
 nav ul {
@@ -35,7 +49,8 @@ nav ul li a {
 }
 /* при наведенні курсора*/
 nav ul li a:hover {
-    background-color: #0056b3;
+    cursor: pointer;
+    background-color: #727980;
     border-radius: 20px;
 }
 
@@ -84,7 +99,16 @@ footer {
     text-align: center;
     padding: 10px;
     margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
+footer p {
+    margin: 5px;
+}
+
 
 /* Адаптивність */
 @media (max-width: 768px) {

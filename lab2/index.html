@@ -12,57 +12,78 @@
     <nav>
         <ul>
             <li><a href="#events">Події</a></li>
-            <li><a href="#bookings">Мої бронювання</a></li>
+            <li><a href="#my-bookings">Мої бронювання</a></li>
             <li><a href="#about">Про нас</a></li>
         </ul>
     </nav>
 </header>
-
 <main>
     <section id="events">
         <h1>Майбутні події</h1>
         <div class="event-grid">
-            <article class="event">
+            <article class="event" data-date="2025-04-15">
                 <img src="images/Українська класика.jpg" alt="Українська класика">
                 <h2>Концерт "Українська класика"</h2>
                 <p>Дата: 15 квітня 2025</p>
                 <p>Місце: Львівська опера</p>
-                <p>Ціна: 500 грн</p>
+                <p>Ціна: <span class="ticket-price">500</span> грн</p>
+                <label for="ticket-count">Кількість квитків:</label>
+                <input type="number" class="ticket-count" value="1" min="1">
+                <p class="total-price">Загальна вартість: 500 грн</p>
+                <button class="book-ticket">Забронювати квиток</button>
             </article>
-            <article class="event">
+            <article class="event" data-date="2025-05-25">
                 <img src="images/Міжнародний джазовий фестиваль.jpg" alt="Міжнародний джазовий фестиваль">
                 <h2>Міжнародний джазовий фестиваль</h2>
                 <p>Дата: 25 травня 2025</p>
                 <p>Місце: Київ, Палац спорту</p>
-                <p>Ціна: 800 грн</p>
+                <p>Ціна: <span class="ticket-price">800</span> грн</p>
+                <label for="ticket-count">Кількість квитків:</label>
+                <input type="number" class="ticket-count" value="1" min="1">
+                <p class="total-price">Загальна вартість: 800 грн</p>
+                <button class="book-ticket">Забронювати квиток</button>
             </article>
-            <article class="event">
+            <article class="event" data-date="2025-06-10">
                 <img src="images/Гамлет.jpg" alt="Театральна вистава 'Гамлет' Вільяма Шекспіра">
                 <h2>Театральна вистава "Гамлет" Вільяма Шекспіра</h2>
                 <p>Дата: 10 червня 2025</p>
                 <p>Місце: Одеський академічний театр</p>
-                <p>Ціна: 400 грн</p>
+                <p>Ціна: <span class="ticket-price">400</span> грн</p>
+                <label for="ticket-count">Кількість квитків:</label>
+                <input type="number" class="ticket-count" value="1" min="1">
+                <p class="total-price">Загальна вартість: 400 грн</p>
+                <button class="book-ticket">Забронювати квиток</button>
             </article>
-            <article class="event">
+            <article class="event" data-date="2025-07-05">
                 <img src="images/Рок-концерт  Зірки української сцени.jpg" alt="Рок-концерт Зірки української сцени">
                 <h2>Рок-концерт "Зірки української сцени</h2>
                 <p>Дата: 5 липня 2025</p>
                 <p>Місце: Харків, Спортивний комплекс "Локомотив"</p>
-                <p>Ціна: 300 грн</p>
+                <p>Ціна: <span class="ticket-price">300</span> грн</p>
+                <label for="ticket-count">Кількість квитків:</label>
+                <input type="number" class="ticket-count" value="1" min="1">
+                <p class="total-price">Загальна вартість: 300 грн</p>
+                <button class="book-ticket">Забронювати квиток</button>
             </article>
-            <article class="event">
+            <article class="event" data-date="2025-08-20">
                 <img src="images/Виставка сучасного мистецтва.jpg" alt="Виставка сучасного мистецтва">
                 <h2>Виставка сучасного мистецтва</h2>
                 <p>Дата: 20 серпня 2025</p>
                 <p>Місце: Київ, Музей сучасного мистецтва</p>
-                <p>Ціна: 150 грн</p>
+                <p>Ціна: <span class="ticket-price">150</span> грн</p>
+                <label for="ticket-count">Кількість квитків:</label>
+                <input type="number" class="ticket-count" value="1" min="1">
+                <p class="total-price">Загальна вартість: 150 грн</p>
+                <button class="book-ticket">Забронювати квиток</button>
             </article>
         </div>
     </section>
 
-    <section id="bookings">
+
+
+    <section id="my-bookings">
         <h1>Мої бронювання</h1>
-        <p>У вас немає заброньованих квитків.</p>
+        <div class="bookings-list"></div>
     </section>
 
     <section id="about">
@@ -79,5 +100,6 @@
     <p>Телефон: +380 12 345 67 89</p>
     <p>Email: maksym.dubyk.oi.2023@lpnu.com</p>
 </footer>
+    <script src="script.js"></script>
 </body>
 </html>

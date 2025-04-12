@@ -19,28 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const eventElement = createEventElement(event);
             eventGrid.appendChild(eventElement);
 
-            const bookButton = eventElement.querySelector('.book-ticket');
-            const ticketCountInput = eventElement.querySelector('.ticket-count');
-            const ticketPrice = event.price;
-            const totalPriceElement = eventElement.querySelector('.total-price');
-
-            ticketCountInput.addEventListener('input', function () {
-                const ticketCount = parseInt(ticketCountInput.value) || 1;
-                totalPriceElement.innerText = `Загальна вартість: ${ticketCount * ticketPrice} грн`;
-            });
-
-            // Бронювання квитка
-            bookButton.addEventListener('click', function () {
-                const ticketCount = parseInt(ticketCountInput.value);
-                const totalPrice = ticketCount * ticketPrice;
-
-                const bookingEntry = createBookingEntry(event, ticketCount, totalPrice);
-                bookingsList.appendChild(bookingEntry);
-
-                bookButton.innerText = 'Заброньовано';
-                bookButton.classList.add('booked');
-                bookButton.disabled = true;
-            });
+            setupPriceUpdate(eventElement, event.price);
+            setupBooking(eventElement, event, bookingsList);
             
             i++;
         }
@@ -85,3 +65,31 @@ function createBookingEntry(event, ticketCount, totalPrice) {
 
     return bookingEntry;
 } 
+
+function setupPriceUpdate(eventElement, ticketPrice) {
+    const ticketCountInput = eventElement.querySelector('.ticket-count');
+    const totalPriceElement = eventElement.querySelector('.total-price');
+
+    ticketCountInput.addEventListener('input', function () {
+        const ticketCount = parseInt(ticketCountInput.value) || 1;
+        totalPriceElement.innerText = `Загальна вартість: ${ticketCount * ticketPrice} грн`;
+    });
+}
+
+function setupBooking(eventElement, event, bookingsList) {
+    const bookButton = eventElement.querySelector('.book-ticket');
+    const ticketCountInput = eventElement.querySelector('.ticket-count');
+    const ticketPrice = event.price;
+
+    bookButton.addEventListener('click', function () {
+        const ticketCount = parseInt(ticketCountInput.value);
+        const totalPrice = ticketCount * ticketPrice;
+
+        const bookingEntry = createBookingEntry(event, ticketCount, totalPrice);
+        bookingsList.appendChild(bookingEntry);
+
+        bookButton.innerText = 'Заброньовано';
+        bookButton.classList.add('booked');
+        bookButton.disabled = true;
+    });
+}

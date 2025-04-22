@@ -34,7 +34,7 @@ const LoginPage = () => {
       await signInWithEmailAndPassword(auth, email, password);
       navigate('/');
     } catch (error) {
-      setError(getErrorMessage(error.code)); // показати зрозуміле повідомлення
+      setError(getErrorMessage(error.code));
     }
   };
 

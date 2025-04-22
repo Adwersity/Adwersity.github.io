@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const bookingsList = document.querySelector('.bookings-list');
     const currentDate = new Date();
 
-    
+
     fetch('data.json')
     .then(response => response.json())
     .then(events => {

@@ -40,7 +40,7 @@ const LoginPage = () => {
   return (
     <form className="auth-form" onSubmit={handleLogin}>
       <h2>Вхід</h2>
-      <input type="email" placeholder="Email" onChange={e => setEmail(e.target.value)} />
+      <input type="email" className="auth-input" placeholder="Email" onChange={e => setEmail(e.target.value)} />
       <input type="password" placeholder="Пароль" onChange={e => setPassword(e.target.value)} />
       {error && <p className="auth-error-message">{error}</p>}
       <button type="submit" className="login-button">Увійти</button>

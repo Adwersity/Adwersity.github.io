@@ -3,22 +3,28 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 import { useNavigate } from 'react-router-dom';
 
-  const getErrorMessage = (code) => {
-    switch (code) {
-      case 'auth/invalid-email':
-        return 'Невірний формат email.';
-      case 'auth/user-disabled':
-        return 'Цей обліковий запис вимкнено.';
-      case 'auth/user-not-found':
-        return 'Користувача з таким email не знайдено.';
-      case 'auth/wrong-password':
-        return 'Невірний пароль.';
-      case 'auth/invalid-credential':
-        return 'Неправильний email або пароль.';
-      default:
-        return 'Сталася помилка. Спробуйте ще раз.';
-    }
-  };
+const getErrorMessage = (code) => {
+  switch (code) {
+    case 'auth/invalid-email':
+      return 'Невірний формат email.';
+    case 'auth/user-disabled':
+      return 'Цей обліковий запис вимкнено.';
+    case 'auth/user-not-found':
+      return 'Користувача з таким email не знайдено.';
+    case 'auth/wrong-password':
+      return 'Невірний пароль.';
+    case 'auth/invalid-credential':
+      return 'Неправильний email або пароль.';
+    default:
+      return 'Сталася помилка. Спробуйте ще раз.';
+  }
+};
+
+const LoginPage = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();

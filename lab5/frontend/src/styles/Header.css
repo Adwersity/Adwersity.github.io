@@ -1,0 +1,102 @@
+header {
+    background-color: #333;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-text {
+    color: rgb(192, 188, 188);
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    left: 20px; 
+}
+
+.header-text span {
+    color: rgb(0, 157, 255);
+}
+
+nav .main-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center; 
+}
+
+nav .main-nav li {
+    display: inline;
+}
+
+nav .main-nav li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 8px 16px;
+}
+
+nav .main-nav li a:hover {
+    cursor: pointer;
+    background-color: #727980;
+    border-radius: 20px;
+}
+
+.auth-section {
+    display: flex;
+    gap: 20px;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+}
+
+.auth-button {
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 8px 16px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none; 
+}
+
+.auth-button.login:hover {
+    background-color: #007bff;
+}
+
+.auth-button.register:hover {
+    background-color: #28a745;
+}
+
+.logout-button {
+    background-color: #333;
+    color: white;
+    border: 2px solid white;
+    font-size: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f;
+}
+
+.user-email {
+    color: white;
+    padding: 8px 16px;
+}

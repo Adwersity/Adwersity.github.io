@@ -2,3 +2,4 @@
 .env
 /server/node_modules
 /server/4.txt
+/server/serviceAccount.json
